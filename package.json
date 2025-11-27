@@ -1,0 +1,14 @@
+{
+  "name": "prou-taskboard-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "start:backend": "npm --prefix backend run dev",
+    "start:frontend": "npm --prefix frontend run dev",
+    "start:all": "concurrently -n backend,frontend -c green,cyan \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

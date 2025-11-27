@@ -1,0 +1,25 @@
+{
+  "name": "prou-taskboard-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "lint": "echo 'Add ESLint config later'",
+    "seed": "node src/scripts/seed.js",
+    "view": "node src/scripts/view-data.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "google-auth-library": "^9.10.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
