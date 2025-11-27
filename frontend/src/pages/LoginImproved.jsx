@@ -107,6 +107,17 @@ export default function LoginImproved() {
             <div className="auth-header">
               <h2 className="auth-title">Welcome Back</h2>
               <p className="auth-subtitle">Sign in to continue to your workspace</p>
+              <div style={{
+                marginTop: '12px',
+                padding: '10px 14px',
+                backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                border: '1px solid rgba(99, 102, 241, 0.2)',
+                borderRadius: '8px',
+                fontSize: '0.875rem',
+                color: '#6366f1'
+              }}>
+                💡 <strong>Tip:</strong> Register as "Administrator" to manage employees and tasks
+              </div>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="auth-form-modern">

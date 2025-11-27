@@ -169,6 +169,29 @@ export default function RegisterImproved() {
                 )}
               </div>
 
+              <div className="form-group">
+                <label htmlFor="role" className="form-label">
+                  <span className="label-icon">👔</span>
+                  Account Type
+                </label>
+                <select
+                  id="role"
+                  className={`form-input ${errors.role ? 'input-error' : ''}`}
+                  {...register('role', { required: 'Please select a role' })}
+                  defaultValue="member"
+                >
+                  <option value="">Select your role</option>
+                  <option value="member">👤 Team Member</option>
+                  <option value="admin">👑 Administrator</option>
+                </select>
+                {errors.role && (
+                  <span className="error-msg">
+                    <span className="error-icon">⚠️</span>
+                    {errors.role.message}
+                  </span>
+                )}
+              </div>
+
               {getErrorMessage() && (
                 <div className="alert-error">
                   <span className="alert-icon">❌</span>
