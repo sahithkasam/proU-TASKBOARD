@@ -9,10 +9,10 @@ import employeeRoutes from './routes/employee.routes.js';
 
 const app = express();
 
-// CORS: allow frontend origin via env or default localhost dev port
+// CORS: allow all origins (open access for demo/portfolio)
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173',
-  credentials: true
+  origin: '*', // Allow all origins
+  credentials: false // Set to false when using origin: '*'
 }));
 
 // Parse JSON bodies
