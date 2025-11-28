@@ -1,6 +1,15 @@
 # 🎯 ProU TaskBoard - Professional Task Management System
 
 A modern, full-stack MERN application for managing employees and tasks with an intuitive Kanban-style board. Features enterprise-grade UI/UX design, real-time updates, advanced task management capabilities, and comprehensive role-based access control.
+
+## 🚀 Live Demo
+
+- **Frontend**: [View Live Application](#) <!-- Add your Vercel URL here -->
+- **Backend API**: [API Health Check](#) <!-- Add your Render URL/api/health here -->
+- **Repository**: [GitHub](https://github.com/sahithkasam/proU-TASKBOARD)
+
+> 💡 **Note**: First load may take 10-15 seconds if backend was idle. Subsequent requests are instant!
+
 ---
 Demo Link : https://drive.google.com/file/d/1unsLD7zVk9cYiVZREYB7alLPFrt4cGxh/view?usp=sharing
 Deployment Link : https://pro-u-taskboard-frontend.vercel.app/
@@ -411,11 +420,96 @@ Use seeded credentials or create a new account:
 
 ---
 
+## 🌐 Deployment
+
+### Live Application
+
+- **Frontend**: Deployed on Vercel
+- **Backend**: Deployed on Render (with cron job to prevent cold starts)
+- **Database**: MongoDB Atlas (Free M0 tier)
+
+### Deployment Stack
+
+```
+Frontend (Vercel)
+    ↓
+Backend (Render)
+    ↓
+MongoDB Atlas
+    +
+Cron Job (keeps backend awake)
+```
+
+### How This Project Was Deployed
+
+#### 1. **Database Setup (MongoDB Atlas)**
+- Created free M0 cluster on MongoDB Atlas
+- Configured database user with password
+- Whitelisted all IPs (0.0.0.0/0) for accessibility
+- Obtained connection string
+
+#### 2. **Backend Deployment (Render)**
+- Connected GitHub repository to Render
+- Configured root directory: `backend`
+- Set build command: `npm install`
+- Set start command: `npm start`
+- Added environment variables:
+  - `PORT=5001`
+  - `NODE_ENV=production`
+  - `MONGO_URI=<MongoDB connection string>`
+  - `JWT_SECRET=<generated secret>`
+  - `JWT_EXPIRES=7d`
+  - `CLIENT_ORIGIN=*` (open CORS for demo)
+- Auto-deploys on GitHub push
+
+#### 3. **Frontend Deployment (Vercel)**
+- Imported project from GitHub
+- Configured root directory: `frontend`
+- Framework preset: Vite
+- Environment variables:
+  - `VITE_API_BASE=<Render backend URL>`
+- Auto-deploys on GitHub push
+- Instant global CDN delivery
+
+#### 4. **Preventing Cold Starts**
+- Set up Cron-job.org to ping backend every 10 minutes
+- Endpoint: `https://backend-url/api/health`
+- Keeps Render free tier always awake
+- No 30-second cold start delays
+
+### Deployment Features
+
+✅ **Zero Downtime**: Cron job keeps backend active 24/7
+✅ **Automatic Deployments**: GitHub push triggers deploy
+✅ **Global CDN**: Vercel serves frontend worldwide
+✅ **SSL Enabled**: HTTPS on both frontend and backend
+✅ **Environment Isolation**: Separate dev/prod configs
+✅ **100% Free**: No credit card required
+
+### Cost Breakdown
+
+| Service | Plan | Cost |
+|---------|------|------|
+| **Vercel** | Hobby (Free) | $0/month |
+| **Render** | Free Tier | $0/month |
+| **MongoDB Atlas** | M0 Free | $0/month |
+| **Cron-job.org** | Free | $0/month |
+| **Total** | | **$0/month** |
+
+### Deployment Guides
+
+For detailed step-by-step instructions, see:
+- **[RENDER_VERCEL_GUIDE.md](./RENDER_VERCEL_GUIDE.md)** - Complete deployment walkthrough
+- **[ADMIN_GUIDE.md](./ADMIN_GUIDE.md)** - Admin features and role setup
+
+---
+
 ## 📖 Additional Documentation
 
-- **NEW_FEATURES.md**: Dark mode, subtasks, and labels implementation details
-- **LOGIN_REDESIGN.md**: Authentication UI redesign documentation
-- **EMPLOYEES_REDESIGN.md**: Employee management dashboard redesign details
+- **[RENDER_VERCEL_GUIDE.md](./RENDER_VERCEL_GUIDE.md)**: Step-by-step deployment guide
+- **[ADMIN_GUIDE.md](./ADMIN_GUIDE.md)**: Admin account setup and features
+- **[backend/README.md](./backend/README.md)**: Backend API documentation
+- **[frontend/README.md](./frontend/README.md)**: Frontend app documentation
 
 ---
 
