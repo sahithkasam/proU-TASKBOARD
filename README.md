@@ -2,6 +2,8 @@
 
 A modern, full-stack MERN application for managing employees and tasks with an intuitive Kanban-style board. Features enterprise-grade UI/UX design, real-time updates, advanced task management capabilities, and comprehensive role-based access control.
 ---
+Demo Link : https://drive.google.com/file/d/1unsLD7zVk9cYiVZREYB7alLPFrt4cGxh/view?usp=sharing
+Deployment Link : https://pro-u-taskboard-frontend.vercel.app/
 
 ## ✨ Features Overview
 
