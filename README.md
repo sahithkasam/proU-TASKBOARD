@@ -4,15 +4,15 @@ A modern, full-stack MERN application for managing employees and tasks with an i
 
 ## 🚀 Live Demo
 
-- **Frontend**: [View Live Application](#) <!-- Add your Vercel URL here -->
-- **Backend API**: [API Health Check](#) <!-- Add your Render URL/api/health here -->
-- **Repository**: [GitHub](https://github.com/sahithkasam/proU-TASKBOARD)
+- **Frontend**: https://pro-u-taskboard-frontend.vercel.app/
+- **Backend API**: https://prou-taskboard-backend.onrender.com/api/health
+- **Demo Link** : https://drive.google.com/file/d/1unsLD7zVk9cYiVZREYB7alLPFrt4cGxh/view?usp=sharing
 
 > 💡 **Note**: First load may take 10-15 seconds if backend was idle. Subsequent requests are instant!
 
 ---
-Demo Link : https://drive.google.com/file/d/1unsLD7zVk9cYiVZREYB7alLPFrt4cGxh/view?usp=sharing
-Deployment Link : https://pro-u-taskboard-frontend.vercel.app/
+
+
 
 ## ✨ Features Overview
 
